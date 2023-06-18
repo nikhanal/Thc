@@ -1,22 +1,14 @@
 import React from "react";
 import styles from "../styles/Footer1.module.css";
 import { FaMapMarker, FaPhone, FaEnvelope } from "react-icons/fa";
-import Image from "next/image";
-import Logo from "../public/logo.svg";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <div className={styles.logo}>
-            <Image src={Logo} alt="Logo" width={100} height={100} />
-            <div className={styles.institute}>
-              <p>Tribhuvan University</p>
-              <p>Institute Of Engineering</p>
-              <p>Thapathali Campus</p>
-            </div>
-          </div>
+          <Logo />
           <div className={styles.contact}>
             <ul>
               <li>
@@ -118,9 +110,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
       <hr className={styles.line} />
-
       <div className={styles.copyRight}>
         <p className={styles.animation}>
           &copy; {new Date().getFullYear()} Thapathali Campus

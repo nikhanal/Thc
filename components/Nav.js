@@ -1,78 +1,158 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "../styles/Nav.module.css";
 import Link from "next/link";
 import { FaAngleDown, FaSearch } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
-import Image from "next/image";
-import logo from "../public/logo.svg";
-const Nav = () => {
-  const [menuOpen, setMenuOpen] = useState(1);
+import Logo from "./Logo";
+import { Context_Search } from "../context/Context_Search";
 
+const Nav = () => {
+  const { search, setSearch } = useContext(Context_Search);
+  const [menuOpen, setMenuOpen] = useState(1);
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const handleSearch = () => {
+    setSearch(!search);
+  };
+  console.log(search);
   return (
     <nav className={styles.nav}>
-      <section className={styles.logo_section}>
-        <div className={styles.logo_section_logo}>
-          <Image
-            src={logo}
-            alt="Thapathali Campus Logo"
-            height={80}
-            quality={100}
-          ></Image>
-        </div>
-        <div className={styles.logo_section_text}>
-          <span className={styles.logo_section_text1}>
-            Tribhuwan University
-          </span>
-          <span className={styles.logo_section_text2}>
-            Institute of Engineering
-          </span>
-          <span className={styles.logo_section_text3}>Thapathali Campus</span>
-        </div>
-      </section>
+      <Logo />
       <section className={styles.link_section}>
         <div className={styles.link_div}>
           <Link href="/" className={styles.links_section_link}>
             Academic
+            {/* <FaAngleDown className={styles.link_div_icon} /> */}
           </Link>
-          <FaAngleDown className={styles.link_div_icon} />
+          <div className={styles.on_hover_content}>
+            <Link href="/" className={styles.on_hover_link}>
+              Undergraduate Programs
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Graduate Programs
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Academic Departments
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Center & Institutes
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Library & Collections
+            </Link>
+          </div>
         </div>
         <div className={styles.link_div}>
           <Link href="/" className={styles.links_section_link}>
             Admission
+            {/* <FaAngleDown className={styles.link_div_icon} /> */}
           </Link>
-          <FaAngleDown className={styles.link_div_icon} />
+          <div className={styles.on_hover_content}>
+            <Link href="/" className={styles.on_hover_link}>
+              Undergraduate Admission
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Graduate Admission
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Fee Structures & Aid
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Professional Admission
+            </Link>
+          </div>
         </div>
         <div className={styles.link_div}>
           <Link href="/" className={styles.links_section_link}>
-            Notice
+            Notices
+            {/* <FaAngleDown className={styles.link_div_icon} /> */}
           </Link>
-          <FaAngleDown className={styles.link_div_icon} />
-        </div>
-        <div className={styles.link_div}>
-          <Link href="/" className={styles.links_section_link}>
-            Socities
-          </Link>
-          <FaAngleDown className={styles.link_div_icon} />
-        </div>
+          {/* <div className={styles.on_hover_content}>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+          </div> */}
+        </div>{" "}
         <div className={styles.link_div}>
           <Link href="/" className={styles.links_section_link}>
             Resources
+            {/* <FaAngleDown className={styles.link_div_icon} /> */}
           </Link>
-          <FaAngleDown className={styles.link_div_icon} />
+          {/* <div className={styles.on_hover_content}>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+          </div> */}
+        </div>
+        <div className={styles.link_div}>
+          <Link href="/" className={styles.links_section_link}>
+            Societies
+            {/* <FaAngleDown className={styles.link_div_icon} /> */}
+          </Link>
+          <div className={styles.on_hover_content}>
+            <Link href="/" className={styles.on_hover_link}>
+              Free Student Union
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              ECAST
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Tensor
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              CESS
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              ASIS
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Industrial Societies
+            </Link>
+          </div>
         </div>
         <div className={styles.link_div}>
           <Link href="/" className={styles.links_section_link}>
             Units
+            {/* <FaAngleDown className={styles.link_div_icon} /> */}
           </Link>
-          <FaAngleDown className={styles.link_div_icon} />
+          {/* <div className={styles.on_hover_content}>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+            <Link href="/" className={styles.on_hover_link}>
+              Link 1
+            </Link>
+          </div> */}
         </div>
       </section>
       <section className={styles.section_right}>
-        <div className={styles.search_section}>
+        <div className={styles.search_section} onClick={handleSearch}>
           <FaSearch className={styles.search_icon} />
         </div>
         {menuOpen ? (

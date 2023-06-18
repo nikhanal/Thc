@@ -1,0 +1,66 @@
+.videoHero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+.videoHero::before {
+  z-index: -99;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  color: white;
+  text-align: left;
+  max-width: 600px;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 768px) {
+  .videoHero {
+    height: 50vh;
+  }
+
+  .content {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    max-width: 300px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}

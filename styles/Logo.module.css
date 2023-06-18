@@ -1,0 +1,27 @@
+/* logo section */
+.logo_section {
+  display: flex;
+  align-items: center;
+}
+
+.logo_section_logo {
+  margin-right: 1rem;
+}
+
+.logo_section_text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  letter-spacing: 0.0625rem;
+}
+.logo_section_text1 {
+  font-size: 14px;
+}
+.logo_section_text2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.logo_section_text3 {
+  font-size: 18px;
+  font-weight: 500;
+}

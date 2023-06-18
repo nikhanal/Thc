@@ -1,15 +1,11 @@
 * {
   padding: 0px;
   margin: 0px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "poppins", sans-serif;
 }
 :root {
-  --primary-color: #ffffff;
-  /* --primary-color: #100054; */
-  /* --text-color: #444aca; */
   --text-color: #000000;
-  /* --text-color: #ffffff; */
-  --secondary-color: #444aca;
-
+  --secondary-color: #ffffff;
+  --primary-color: #444aca;
   /* --secondary-color: #894a00; */
 }
