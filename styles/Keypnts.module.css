@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 40px;
+  gap: 60px;
+  color: var(--text-color);
+}
+
+.heading {
+  display: flex;
+  gap: 40px;
+}
+.heading h2 {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 400px;
+  border-right: 6px solid var(--primary-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.heading p {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 400;
+  width: 400px;
+  justify-content: center;
+  font-family: "Merryweather", serif;
+  width: 100%;
+  letter-spacing: 0.8px;
+  align-items: center;
+}
+
+.keypoints {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.keycontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+}
+
+.img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  color: var(--primary-color);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.content h1 {
+  display: flex;
+}
+
+.content p {
+  display: flex;
+  text-align: justify;
+  line-height: 23px;
+  font-size: 1.2rem;
+}
