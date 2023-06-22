@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import VideoSec from "../components/VideoSec";
 import H_Academic from "../components/H_Academic";
-import MessageChief from "../components/MessageChief";
+// import MessageChief from "../components/MessageChief";
 import Testimonial from "../components/Testimonial";
 
 export default function Home() {
