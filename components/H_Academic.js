@@ -78,7 +78,7 @@ const H_Academic = () => {
             {/* <BsArrowRight className={styles.icon} /> */}
           </button>
         </Link>
-        <Link href="/autmobile">
+        <Link href="/autmobile&mechanical">
           <button
             onMouseEnter={() =>
               handleButtonHover(
@@ -97,7 +97,7 @@ const H_Academic = () => {
               )
             }
           >
-            Automobile
+            Automobile & Mechanical
             {/* <BsArrowRight className={styles.icon} /> */}
           </button>
         </Link>
@@ -124,7 +124,7 @@ const H_Academic = () => {
             {/* <BsArrowRight className={styles.icon} /> */}
           </button>
         </Link>
-        <Link href="/electronicsandcomputer">
+        <Link href="/electronics&computer">
           <button
             onMouseEnter={() =>
               handleButtonHover(
@@ -166,7 +166,7 @@ const H_Academic = () => {
               )
             }
           >
-            Cvil
+            Civil
             {/* <BsArrowRight className={styles.icon} /> */}
           </button>
         </Link>
