@@ -22,7 +22,7 @@ function ContentWrapper({ Component, pageProps }) {
   return (
     <>
       {search ? <Search display="flex" /> : <Search display="none" />}
-      {search ? <SubNav display="none" /> : <SubNav display="flex" />}
+      {!search && <SubNav />}
       {search ? <Nav display="none" /> : <Nav display="flex" />}
       {/* {search ? (
         <>

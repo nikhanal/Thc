@@ -11,100 +11,62 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Testimonial = () => {
   return (
-    <>
-      <section className={styles.container}>
-        <h3 className={styles.heading}>Our Student Testimonials</h3>
-        <div className={`${styles.testimonial} ${styles.mySwiper}`}>
-          <Swiper
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 2000 }}
-          >
-            <SwiperSlide className={styles.slide}>
+    <section className={styles.container}>
+      <h3 className={styles.heading}>Our Student Testimonials</h3>
+      <div className={styles.testimonial}>
+        <Swiper
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2000 }}
+        >
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.imageWrapper}>
               <Image src={profileImage} alt="" className={styles.image} />
-              <p>
-                "Studying at Thapathali Campus has been a life-changing
-                experience. Knowledgeable professors, a diverse campus, and
-                endless growth opportunities have prepared me for success."
-              </p>
-              <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
-              <div className={styles.details}>
-                <span className={styles.name}>
-                  - Jyotsna Jha, Engineering Student
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
+            </div>
+            <p className={styles.content}>
+              Studying at Thapathali Campus has been a life-changing experience.
+              Knowledgeable professors, a diverse campus, and endless growth
+              opportunities have prepared me for success.
+            </p>
+            <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
+            <div className={styles.details}>
+              {/*
+              <span className={styles.name}>
+                - Jyotsna Jha, Engineering Student
+              </span>
+  */}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.imageWrapper}>
+              <Image src={profileImage} alt="" className={styles.image} />
+            </div>
+            <p className={styles.content}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+              saepe provident dolorem a quaerat quo error facere nihil deleniti
+              eligendi ipsum adipisci, fugit, architecto amet asperiores
+              doloremque deserunt eum nemo.
+            </p>
+            <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
+            <div className={styles.details}></div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.imageWrapper}>
               <Image src={profileImage1} alt="" className={styles.image} />
-              <p>
-                Thapathali Campus surpassed my expectations. Expert faculty,
-                hands-on learning, and top-notch facilities have shaped me into
-                a skilled engineer.
-              </p>
-              <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
-              <div className={styles.details}>
-                <span className={styles.name}>
-                  - Michael, Engineering student
-                </span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <Image src={profileImage2} alt="" className={styles.image} />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam, saepe provident dolorem a quaerat quo error facere
-                nihil deleniti eligendi ipsum adipisci, fugit, architecto amet
-                asperiores doloremque deserunt eum nemo.
-              </p>
-              <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
-              <div className={styles.details}>
-                <span className={styles.name}>Marnie Lotter</span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <Image src={profileImage} alt="" className={styles.image} />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam, saepe provident dolorem a quaerat quo error facere
-                nihil deleniti eligendi ipsum adipisci, fugit, architecto amet
-                asperiores doloremque deserunt eum nemo.
-              </p>
-              <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
-              <div className={styles.details}>
-                <span className={styles.name}>Marnie Lotter</span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <Image src={profileImage} alt="" className={styles.image} />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam, saepe provident dolorem a quaerat quo error facere
-                nihil deleniti eligendi ipsum adipisci, fugit, architecto amet
-                asperiores doloremque deserunt eum nemo.
-              </p>
-              <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
-              <div className={styles.details}>
-                <span className={styles.name}>Marnie Lotter</span>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <Image src={profileImage} alt="" className={styles.image} />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam, saepe provident dolorem a quaerat quo error facere
-                nihil deleniti eligendi ipsum adipisci, fugit, architecto amet
-                asperiores doloremque deserunt eum nemo.
-              </p>
-              <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
-              <div className={styles.details}>
-                <span className={styles.name}>Marnie Lotter</span>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </section>
-    </>
+            </div>
+            <p className={styles.content}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+              saepe provident dolorem a quaerat quo error facere nihil deleniti
+              eligendi ipsum adipisci, fugit, architecto amet asperiores
+              doloremque deserunt eum nemo.
+            </p>
+            <i className={`${styles.quoteIcon} bx bxs-quote-alt-left`}></i>
+            <div className={styles.details}></div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
   );
 };
 

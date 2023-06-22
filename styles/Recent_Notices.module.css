@@ -1,18 +1,18 @@
 .container_right {
-    margin-top: 3rem;
-    float: right;
+  margin-top: 3rem;
+  float: right;
 }
 
 .container_right_button {
-    padding: 0.5rem 4rem;
-    margin: 2rem 0 1rem 0;
-    background: var(--bg-color);
-    color: var(--font-color);
-    border: none;
+  padding: 0.5rem 4rem;
+  margin: 2rem 0 1rem 0;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
 }
 
 .link_text_recent {
-    font-size: 1rem;
-    text-decoration: none;
-    color: var(--black);
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--black);
 }

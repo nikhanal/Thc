@@ -13,7 +13,7 @@ export default function Home() {
         <title>Thapathali Campus</title>
       </Head>
       <VideoSec />
-      <MessageChief />
+      {/* <MessageChief /> */}
       <H_Academic />
       <Testimonial />
     </>
