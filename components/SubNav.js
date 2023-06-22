@@ -5,9 +5,9 @@ import { BsFillJournalBookmarkFill } from "react-icons/bs";
 import { IoLibraryOutline } from "react-icons/io5";
 import { FaUserGraduate } from "react-icons/fa";
 import { RiFilePaper2Line } from "react-icons/ri";
-const SubNav = () => {
+const SubNav = ({ display }) => {
   return (
-    <nav className={styles.subNav}>
+    <nav className={styles.subNav} style={{ display: display }}>
       <section className={styles.section_left}>
         <div>
           <Link href="/">

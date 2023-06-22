@@ -7,7 +7,7 @@ import { IoMdClose } from "react-icons/io";
 import Logo from "./Logo";
 import { Context_Search } from "../context/Context_Search";
 
-const Nav = () => {
+const Nav = ({ display }) => {
   const { search, setSearch } = useContext(Context_Search);
   const [menuOpen, setMenuOpen] = useState(1);
   const handleToggleMenu = () => {
@@ -19,7 +19,7 @@ const Nav = () => {
   console.log(search);
   return (
     <>
-      <nav className={styles.nav}>
+      <nav className={styles.nav} style={{ display: display }}>
         <Logo className={styles.logo_section} color="black" />
         <section className={styles.link_section}>
           <div className={styles.link_div}>

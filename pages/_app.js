@@ -21,16 +21,22 @@ function ContentWrapper({ Component, pageProps }) {
   const { search, setSearch } = useContext(Context_Search);
   return (
     <>
-      {search ? (
+      {search ? <Search display="flex" /> : <Search display="none" />}
+      {search ? <Nav display="none" /> : <Nav display="flex" />}
+      {search ? <SubNav display="none" /> : <SubNav display="flex" />}
+      {/* {search ? (
         <>
-          <Search />
+          <Search display="flex" />
+          <SubNav display="none" />
+          <Nav display="none" />
         </>
       ) : (
         <>
-          <SubNav />
-          <Nav />
+          <Search display="none" />
+          <Nav display="flex" />
+          <SubNav display="flex" />
         </>
-      )}
+      )} */}
       <Component {...pageProps} />
       <Footer />
     </>

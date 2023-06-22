@@ -3,13 +3,13 @@ import styles from "../styles/Search.module.css";
 import { IoMdClose } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { Context_Search } from "../context/Context_Search";
-const Search = () => {
+const Search = ({ display }) => {
   const { search, setSearch } = useContext(Context_Search);
   const handleCross = () => {
     setSearch(0);
   };
   return (
-    <div className={styles.search}>
+    <div className={styles.search} style={{ display: display }}>
       <section className={styles.top_section}>
         <div className={styles.cross} onClick={handleCross}>
           <IoMdClose className={styles.cross_icon} />
