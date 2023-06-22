@@ -18,9 +18,11 @@ export const getStaticProps = async () => {
 }
 
 const Single_Notice = (props) => {
-  useEffect(() => {
-    console.log(props.title);
-  }, []);
+  // Parse the date string into a Date object
+  const dateObject = new Date(props.created);
+  // Format the date to a string like "2021-01-01" "year-month-day"
+  const formattedDate = dateObject.toISOString().split('T')[0];
+
 
   return (
       <Card className={styles.cards_container}>
@@ -31,7 +33,7 @@ const Single_Notice = (props) => {
                           {props.title}
                       </a>
                       <div className={styles.infos}>
-                          <FiClock className={styles.icons} /> <p className={styles.sub_texts}>{props.created}</p>
+                          <FiClock className={styles.icons} /> <p className={styles.sub_texts}>{formattedDate}</p>
                       </div>
                   </Card.Body>
               </div>
