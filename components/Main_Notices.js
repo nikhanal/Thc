@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import Recent_Notices from './Recent_Notices';
 
 export const getStaticProps = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const res = await fetch('http://10.10.100.216:8000/api/notice/notices/');
     const data = await res.json();
 
     return {
@@ -15,6 +15,38 @@ export const getStaticProps = async () => {
             apiDataMain: data
         }
     }
+}
+
+const Single_Notice = (props) => {
+  useEffect(() => {
+    console.log(props.title);
+  }, []);
+
+  return (
+      <Card className={styles.cards_container}>
+          <div className={styles.cards}>
+              <div className={styles.cards_left}>
+                  <Card.Body>
+                      <a href='/notices' target='_blank' className={styles.link_text}>
+                          {props.title}
+                      </a>
+                      <div className={styles.infos}>
+                          <FiClock className={styles.icons} /> <p className={styles.sub_texts}>{props.created}</p>
+                      </div>
+                  </Card.Body>
+              </div>
+              <div className={styles.cards_right}>
+                  <a href={props.download_file} target='_blank'>
+                      {' '}
+                      <button className={styles.cards_right_button}>Download</button>{' '}
+                  </a>
+              </div>
+              <div className={styles.cards_right_hides}>
+                  <FaDownload />
+              </div>
+          </div>
+      </Card>
+  )
 }
 
 const Main_Notices = ({ apiDataMain }) => {
@@ -137,29 +169,7 @@ const Main_Notices = ({ apiDataMain }) => {
         <div className={styles.container_left}>
           {currentItems.map((datas) => (
             <div key={datas.id}>
-              <Card className={styles.cards_container}>
-                <div className={styles.cards}>
-                  <div className={styles.cards_left}>
-                    <Card.Body>
-                      <a href='/notices' target='_blank' className={styles.link_text}>
-                        {datas.title}
-                      </a>
-                      <div className={styles.infos}>
-                        <FiClock className={styles.icons} /> <p className={styles.sub_texts}>{date}</p>
-                      </div>
-                    </Card.Body>
-                  </div>
-                  <div className={styles.cards_right}>
-                    <a href='https://tcioe.edu.np/notice' target='_blank'>
-                      {' '}
-                      <button className={styles.cards_right_button}>Download</button>{' '}
-                    </a>
-                  </div>
-                  <div className={styles.cards_right_hides}>
-                    <FaDownload />
-                  </div>
-                </div>
-              </Card>
+              <Single_Notice title={datas.title} created={datas.created} download_file={datas.download_file} />
             </div>
           ))}
           {renderButtons()}

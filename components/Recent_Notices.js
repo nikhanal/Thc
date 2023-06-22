@@ -27,7 +27,7 @@ const Recent_Notices = ({ apiDataMain }) => {
                 target="_blank"
                 className={styles.link_text_recent}
               >
-                <IoMdNotifications /> {datas.id}{" "}
+                <IoMdNotifications /> {datas.title}{" "}
               </a>
             </ListGroup.Item>
           </ListGroup>
