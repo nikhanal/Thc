@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styles from "../styles/Nav.module.css";
 import Link from "next/link";
 import { FaAngleDown, FaSearch } from "react-icons/fa";
@@ -8,6 +8,22 @@ import Logo from "./Logo";
 import { Context_Search } from "../context/Context_Search";
 
 const Nav = ({ display }) => {
+  const [onScroll, onsetOnScroll] = useState(false);
+
+  const reduceSize = () => {
+    if (window.scrollY > 0) {
+      onsetOnScroll(true);
+    } else {
+      onsetOnScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", reduceSize);
+    return () => {
+      window.removeEventListener("scroll", reduceSize);
+    };
+  }, []);
   const { search, setSearch } = useContext(Context_Search);
   const [menuOpen, setMenuOpen] = useState(1);
   const handleToggleMenu = () => {
@@ -19,7 +35,10 @@ const Nav = ({ display }) => {
   console.log(search);
   return (
     <>
-      <nav className={styles.nav} style={{ display: display }}>
+      <nav
+        className={`${styles.nav} ${onScroll ? styles.shrink : ""}`}
+        style={{ display: display }}
+      >
         <Logo className={styles.logo_section} color="black" />
         <section className={styles.link_section}>
           <div className={styles.link_div}>

@@ -58,6 +58,17 @@
   top: -1.7px;
   left: 198px;
 }
+.nav.shrink {
+  padding: 0.5rem 40px;
+}
+
+.nav.shrink .links_section_link {
+  padding: 25px 0;
+}
+
+.nav.shrink .link_section {
+  gap: 1.5rem;
+}
 .on_hover_link {
   color: #333;
   padding: 16px 20px;
@@ -117,6 +128,7 @@
   }
   .logo_section_text3 {
     font-size: 16px;
+    font-weight: bold;
   }
   .links_section_link {
     font-size: 12px;

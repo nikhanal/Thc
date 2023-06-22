@@ -1,14 +1,49 @@
 import React from "react";
 import styles from "../styles/Footer1.module.css";
+import logostyles from "../styles/Logo.module.css";
 import { FaMapMarker, FaPhone, FaEnvelope } from "react-icons/fa";
 import Logo from "./Logo";
+import logo from "../public/logo.svg";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <Logo color="white" />
+          <section className={logostyles.logo_section}>
+            <Link href="/" className={logostyles.logo_section_link}>
+              <div className={logostyles.logo_section_logo}>
+                <Image
+                  src={logo}
+                  alt="Thapathali Campus Logo"
+                  height={80}
+                  quality={100}
+                />
+              </div>
+              <div className={logostyles.logo_section_text}>
+                <span
+                  className={logostyles.logo_section_text1}
+                  style={{ color: "white" }}
+                >
+                  Tribhuwan University
+                </span>
+                <span
+                  className={logostyles.logo_section_text2}
+                  style={{ color: "white" }}
+                >
+                  Institute of Engineering
+                </span>
+                <span
+                  className={logostyles.logo_section_text3}
+                  style={{ color: "white" }}
+                >
+                  Thapathali Campus
+                </span>
+              </div>
+            </Link>
+          </section>
           <div className={styles.contact}>
             <ul>
               <li>

@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../public/logo.svg";
 import styles from "../styles/Logo.module.css";
 import Link from "next/link";
 
 const Logo = ({ color }) => {
+  const [onScroll, onsetOnScroll] = useState(false);
+
+  const reduceSize = () => {
+    if (window.scrollY > 0) {
+      onsetOnScroll(true);
+    } else {
+      onsetOnScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", reduceSize);
+    return () => {
+      window.removeEventListener("scroll", reduceSize);
+    };
+  }, []);
+
   return (
     <section className={styles.logo_section}>
       <Link
@@ -16,17 +33,22 @@ const Logo = ({ color }) => {
           <Image
             src={logo}
             alt="Thapathali Campus Logo"
-            height={80}
+            height={onScroll ? 60 : 80}
             quality={100}
-          ></Image>
+          />
         </div>
         <div className={styles.logo_section_text}>
-          <span className={styles.logo_section_text1}>
-            Tribhuwan University
-          </span>
-          <span className={styles.logo_section_text2}>
-            Institute of Engineering
-          </span>
+          {!onScroll && (
+            <>
+              <span className={styles.logo_section_text1}>
+                Tribhuwan University
+              </span>
+              <span className={styles.logo_section_text2}>
+                Institute of Engineering
+              </span>
+            </>
+          )}
+
           <span className={styles.logo_section_text3}>Thapathali Campus</span>
         </div>
       </Link>
