@@ -283,7 +283,7 @@
   }
 
   .outerSection {
-    display: flex;
+    display: grid;
     flex-direction: column;
     width: 100%;
     align-items: center;
