@@ -95,7 +95,7 @@ const Nav = () => {
             </div>
           </div>
           <div className={styles.link_div}>
-            <Link href="/" className={styles.links_section_link}>
+            <Link href="/notices" className={styles.links_section_link}>
               Notices
               {/* <FaAngleDown className={styles.link_div_icon} /> */}
             </Link>

@@ -1,0 +1,106 @@
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    gap: 8rem;
+    margin-top: 2rem;
+}
+
+.cards_container {
+    margin-top: 0.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1.6fr 0.4fr;
+}
+
+.cards_right {
+    padding: 1.3rem;
+    display: flex;
+}
+
+.cards_right_button {
+    border-radius: 0.3rem;
+    background: var(--bg-color);
+    color: var(--font-color);
+    border: none;
+    padding: 0.5rem 2rem;
+}
+
+.cards_right_hides {
+    display: none;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.link_text {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.3rem;
+    font-weight: bold; 
+}
+
+.infos {
+    display: flex;
+}
+
+.icons {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.sub_texts {
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+    .cards_right_button {
+        margin: 0.5rem 0.2rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+    }
+
+    .container_left {
+        margin-bottom: -10rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards_right {
+        display: none;
+    }
+
+    .cards_right_hides {
+        display: inline;
+        
+    }
+}
+
+.pageButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--brown);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2rem 0.2rem;
+  }
+  
+  .pageButton:hover {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+  }
+  
+  .active {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+  }
+  
