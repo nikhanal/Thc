@@ -1,0 +1,20 @@
+.text {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .calender {
+    padding: 0.7rem 3rem;
+    text-align: center;
+    border-radius: 6px;
+  }
+  
+  .calender:hover {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 990px) {
+    .text {
+      text-align: left;
+    }
+  }
