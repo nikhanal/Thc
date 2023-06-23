@@ -53,20 +53,23 @@ const Single_Notice = (props) => {
     <Card className={styles.cards_container}>
       <div className={styles.cards}>
         <div className={styles.cards_left}>
-          <Card.Body>
-            <a href={props.download_file} target='_blank' rel='noopener noreferrer' className={styles.link_text}>
-              {props.title}
-            </a>
-            <div className={styles.infos}>
-              <FiClock className={styles.icons} /> <p className={styles.sub_texts}>{formattedDate}</p>
+          <Card.Body className={styles.tot_c}>
+            <div className={styles.c_left}>
+              <a href={props.download_file} target='_blank' rel='noopener noreferrer' className={styles.link_text}>
+                {props.title}
+              </a>
+              <div className={styles.infos}>
+                <FiClock className={styles.icons} /> <p className={styles.sub_texts}>{formattedDate}</p>
+              </div>
             </div>
+            <div className={styles.c_right}>
+              <button className={styles.cards_right_button} onClick={handleDownload}>Download</button>
+            </div>
+
           </Card.Body>
         </div>
-        <div className={styles.cards_right}>
-          <button className={styles.cards_right_button} onClick={handleDownload}>Download</button>
-        </div>
         <div className={styles.cards_right_hides} onClick={handleDownload}>
-        <FaDownload />
+          <FaDownload />
         </div>
       </div>
     </Card>
@@ -196,14 +199,11 @@ const Main_Notices = ({ apiDataMain }) => {
       <div className={`${styles.container} container`}>
         <div className={styles.container_left}>
           {currentItems.map((datas) => (
-            // <div key={datas.id}>
             <Single_Notice key={datas.id} title={datas.title} created={datas.created} download_file={datas.download_file} />
-            // </div>
           ))}
           {renderButtons()}
         </div>
         <div className={styles.container_right}>
-          {/* <Recent_Notices apiDataMain={currentItems} /> */}
           <Calender />
         </div>
       </div>
