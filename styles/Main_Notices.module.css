@@ -15,7 +15,7 @@
 }
 
 .cards_right {
-  padding: 1.3rem;
+  padding: 2rem;
   display: flex;
 }
 
@@ -24,7 +24,15 @@
   background: var(--primary-color);
   color: var(--secondary-color);
   border: none;
-  padding: 0.5rem 2rem;
+  padding: 0 2rem; 
+  transition: 0.5s ease;
+}
+
+.cards_right_button:hover {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--primary-color);
+  transition: 0.5s ease;
 }
 
 .cards_right_hides {
@@ -38,6 +46,10 @@
   color: var(--text-color);
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.link_text:hover {
+  color: var(--primary-color);
 }
 
 .infos {
@@ -80,6 +92,8 @@
 
   .cards_right_hides {
     display: inline;
+    outline: none;
+    border: 0px;
   }
 }
 
