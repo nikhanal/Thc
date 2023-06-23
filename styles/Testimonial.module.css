@@ -2,6 +2,7 @@
   text-align: center;
   margin: 0 auto;
   padding: 80px;
+  background-color: #f4f4f5;
 }
 
 .heading {
@@ -19,6 +20,7 @@
 }
 
 .swiper-container {
+  background-color: #f4f4f5;
   width: 100%;
   height: 300px;
 }
@@ -89,8 +91,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  background-color: white; /* New background color */
+  height: 100%; /* New background color */
   text-align: center;
   width: 100%;
 }

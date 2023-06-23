@@ -1,43 +1,59 @@
-// import React from "react";
-// import styles from "../styles/Message.module.css";
-// import Image from "next/image";
-// import profilex from "../assets/images/chief1.jpg";
+import styles from "../styles/Message.module.css";
+import Image from "next/image";
+import { FaPhone, FaEnvelope } from "react-icons/fa";
 
-// const MessageChief = () => {
-//   return (
-//     <section className={styles.section}>
-//       <div className={styles.container}>
-//         <div className={styles.grid}>
-//           <div className={styles.left}>
-//             <Image src={profilex} alt="" />
-//           </div>
-//           <div className={styles.right}>
-//             <h1>Welcome To Thapathali Campus</h1>
-//             <h3>Campus Chief</h3>
-//             <p>
-//               I invite you to explore our vibrant and inclusive learning
-//               environment. With dedicated faculty, cutting-edge facilities, and
-//               innovative programs, we strive to empower students for success.
-//               Join us in fostering excellence, diversity, and personal growth.
-//               Feel free to reach out to us with any questions or inquiries.
-//               Thapathali Campus, located at the center of Kathmandu city, was
-//               established in 2023 B.S.(1967 AD) to develop middle level manpower
-//               in the field mechanical and automobile engineering. It is one of
-//               the constituent campus of Institute of Engineering under Tribhuvan
-//               University, which upgraded its programs to bachelor and master.
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-//               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-//               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-//               reprehenderit in voluptate velit esse cillum dolore eu fugiat
-//               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-//               sunt in culpa qui officia deserunt mollit anim id est laborum.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
+import profilex from "../assets/images/chief1.jpg";
 
-// export default MessageChief;
+const MessageChief = () => {
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <div className={styles.imageContainer}>
+          <Image
+            src={profilex}
+            width={430}
+            alt="Cool Campus Event Illustration"
+            className={styles.image}
+          />
+        </div>
+        <div className={styles.textBox}>
+          <div className={styles.textContainer}>
+            <h2 className={styles.heading}>Words From Campus Chief</h2>
+            <p className={styles.description}>
+              Welcome to our campus! As the Campus Head, I am delighted to have
+              you join our vibrant community. Our campus is a place where
+              students are encouraged to explore their passions, expand their
+              horizons, and create lasting memories. We strive to provide a
+              nurturing and inclusive environment that fosters academic
+              excellence, personal growth, and holistic development. With
+              state-of-the-art facilities, dedicated faculty members, and a wide
+              range of co-curricular activities, we aim to empower our students
+              to become future leaders and make a positive impact in their
+              chosen fields. We are committed to providing the best educational
+              experience and support to help you thrive during your time with
+              us. Together, let&apos;s embark on an exciting journey of
+              learning, discovery, and success. Welcome to our campus family! My
+              door is always open to students, parents, and faculty members. I
+              am here to listen, guide, and support you throughout your
+              educational journey. Together, let&apos;s create a vibrant and
+              inspiring campus where dreams are nurtured and achievements
+              celebrated.
+            </p>
+            <div className={styles.cardsContainer}>
+              <div className={styles.card}>
+                <FaPhone className={styles.icon} />
+                <p className={styles.cardContent}>+977-01-4246307</p>
+              </div>
+              <div className={styles.card}>
+                <FaEnvelope className={styles.icon} />
+                <p className={styles.cardContent}>gyanwalikhem@ioe.edu.np</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MessageChief;

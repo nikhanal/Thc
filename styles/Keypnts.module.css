@@ -4,6 +4,7 @@
   padding: 60px 40px;
   gap: 60px;
   color: var(--text-color);
+  background-color: #f4f4f5;
 }
 
 .heading {

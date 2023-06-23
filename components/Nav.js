@@ -39,7 +39,7 @@ const Nav = ({ display }) => {
         className={`${styles.nav} ${onScroll ? styles.shrink : ""}`}
         style={{ display: display }}
       >
-        <Logo className={styles.logo_section} color="black" />
+        <Logo className={styles.logo_section} color="444aca" />
         <section className={styles.link_section}>
           <div className={styles.link_div}>
             <Link href="/" className={styles.links_section_link}>

@@ -22,19 +22,19 @@
 
 .logo_section_text1 {
   font-size: 14px;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .logo_section_text2 {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .logo_section_text3 {
   font-size: 18px;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
