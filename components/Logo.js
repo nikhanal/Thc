@@ -48,7 +48,6 @@ const Logo = ({ color }) => {
               </span>
             </>
           )}
-
           <span className={styles.logo_section_text3}>Thapathali Campus</span>
         </div>
       </Link>
